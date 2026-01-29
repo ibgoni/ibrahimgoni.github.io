@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibrahim Goni | PhD Candidate, CERDI - Universit&eacute; Clermont Auvergne</title>
+    <meta name="description" content="Abdoul Kadiri Ibrahim Goni - PhD Candidate in Development Economics at CERDI, Universit&eacute; Clermont Auvergne. Research on digital transitions, agricultural transformation, and ecological trade-offs in Sub-Saharan Africa.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a3a5c;
+            --accent: #2c6fbb;
+            --text: #333;
+            --text-light: #555;
+            --bg: #ffffff;
+            --bg-light: #f8f9fa;
+            --border: #e0e0e0;
+            --max-width: 960px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--primary);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        nav .nav-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2rem;
+        }
+
+        nav .nav-name {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+            padding: 0.9rem 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 0;
+        }
+
+        nav ul li a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            font-size: 0.92rem;
+            font-weight: 400;
+            padding: 1rem 1.1rem;
+            display: block;
+            transition: color 0.2s, background 0.2s;
+            letter-spacing: 0.02em;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #fff;
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* Hamburger menu */
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        /* Main content */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 2.5rem 2rem;
+        }
+
+        /* Hero section */
+        .hero {
+            display: flex;
+            gap: 2.5rem;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+
+        .hero-photo {
+            flex-shrink: 0;
+        }
+
+        .hero-photo img {
+            width: 200px;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 4px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+
+        .hero-photo .placeholder-photo {
+            width: 200px;
+            height: 240px;
+            background: var(--bg-light);
+            border: 2px dashed var(--border);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 0.85rem;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .hero-text h1 {
+            font-family: 'EB Garamond', serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+            line-height: 1.2;
+        }
+
+        .hero-text .title {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            margin-bottom: 0.6rem;
+        }
+
+        .hero-text .affiliation {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 1.2rem;
+        }
+
+        .hero-text .affiliation a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .hero-text .affiliation a:hover {
+            text-decoration: underline;
+        }
+
+        .hero-text .contact-line {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 0.3rem;
+        }
+
+        .hero-text .contact-line a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .hero-text .contact-line a:hover {
+            text-decoration: underline;
+        }
+
+        .hero-text .social-links {
+            margin-top: 1rem;
+            display: flex;
+            gap: 0.8rem;
+        }
+
+        .hero-text .social-links a {
+            color: var(--text-light);
+            font-size: 1.2rem;
+            transition: color 0.2s;
+        }
+
+        .hero-text .social-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        section h2 {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        section p {
+            margin-bottom: 0.8rem;
+            text-align: justify;
+        }
+
+        /* Research interests */
+        .research-fields {
+            list-style: none;
+            padding: 0;
+        }
+
+        .research-fields li {
+            padding: 0.3rem 0;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+
+        .research-fields li::before {
+            content: "\2022";
+            color: var(--accent);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Papers */
+        .paper {
+            margin-bottom: 1.5rem;
+            padding-left: 1.2rem;
+            border-left: 3px solid var(--bg-light);
+        }
+
+        .paper:hover {
+            border-left-color: var(--accent);
+        }
+
+        .paper .paper-title {
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 0.2rem;
+        }
+
+        .paper .paper-title a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .paper .paper-title a:hover {
+            text-decoration: underline;
+        }
+
+        .paper .paper-authors {
+            font-size: 0.92rem;
+            color: var(--text-light);
+            margin-bottom: 0.15rem;
+        }
+
+        .paper .paper-details {
+            font-size: 0.88rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .paper .paper-abstract {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 0.5rem;
+            display: none;
+        }
+
+        .paper .abstract-toggle {
+            font-size: 0.85rem;
+            color: var(--accent);
+            cursor: pointer;
+            border: none;
+            background: none;
+            padding: 0;
+            margin-top: 0.3rem;
+            font-family: inherit;
+        }
+
+        .paper .abstract-toggle:hover {
+            text-decoration: underline;
+        }
+
+        /* Education / CV */
+        .cv-entry {
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .cv-year {
+            flex-shrink: 0;
+            width: 100px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        .cv-details {
+            flex: 1;
+        }
+
+        .cv-details .cv-title {
+            font-weight: 600;
+        }
+
+        .cv-details .cv-institution {
+            font-size: 0.92rem;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 1.5rem 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        /* Mobile */
+        @media (max-width: 700px) {
+            .hero {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .hero-text .social-links {
+                justify-content: center;
+            }
+
+            .hero-photo img,
+            .hero-photo .placeholder-photo {
+                width: 160px;
+                height: 200px;
+            }
+
+            nav .nav-inner {
+                padding: 0 1rem;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--primary);
+                box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            }
+
+            nav ul.open {
+                display: flex;
+            }
+
+            nav ul li a {
+                padding: 0.8rem 1.5rem;
+                border-top: 1px solid rgba(255,255,255,0.1);
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .container {
+                padding: 1.5rem 1rem;
+            }
+
+            .cv-entry {
+                flex-direction: column;
+                gap: 0.2rem;
+            }
+
+            .cv-year {
+                width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <div class="nav-inner">
+        <a href="#" class="nav-name">Ibrahim Goni</a>
+        <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('nav ul').classList.toggle('open')">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul>
+            <li><a href="#about" class="active">Home</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#cv">CV</a></li>
+            <li><a href="#teaching">Teaching</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<div class="container">
+
+    <!-- Hero -->
+    <div class="hero" id="about">
+        <div class="hero-photo">
+            <!-- Replace with your photo: <img src="photo.jpg" alt="Ibrahim Goni"> -->
+            <div class="placeholder-photo">
+                <span>Add your<br>photo here<br><small>(photo.jpg)</small></span>
+            </div>
+        </div>
+        <div class="hero-text">
+            <h1>Abdoul Kadiri Ibrahim Goni</h1>
+            <div class="title">PhD Candidate in Development Economics</div>
+            <div class="affiliation">
+                <a href="https://cerdi.uca.fr/" target="_blank">CERDI</a> &mdash;
+                Universit&eacute; Clermont Auvergne, CNRS, IRD<br>
+                Clermont-Ferrand, France
+            </div>
+            <div class="contact-line">
+                <i class="fas fa-envelope" style="width:16px;"></i>
+                <a href="mailto:Ibrahim_Goni.ABDOULKADIRI@doctorant.uca.fr">Ibrahim_Goni.ABDOULKADIRI@doctorant.uca.fr</a>
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/abdoul-kadiri-ibrahim-goni-4287b124a" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/ibrahimgoni" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <!-- Add your Google Scholar, ORCID, etc. -->
+                <!-- <a href="#" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a> -->
+                <!-- <a href="#" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- About -->
+    <section>
+        <h2>About</h2>
+        <p>
+            I am a PhD candidate in Development Economics at the
+            <a href="https://cerdi.uca.fr/" target="_blank">Centre d'&Eacute;tudes et de Recherches sur le D&eacute;veloppement International (CERDI)</a>,
+            Universit&eacute; Clermont Auvergne (UCA), affiliated with CNRS and IRD.
+        </p>
+        <p>
+            My research focuses on the economics of digital transitions, agricultural transformation,
+            and ecological trade-offs in Sub-Saharan Africa. I study how digital technologies reshape
+            rural economies, how agricultural systems adapt to environmental pressures, and the
+            interactions between economic development and ecological sustainability.
+        </p>
+    </section>
+
+    <!-- Research Interests -->
+    <section>
+        <h2>Research Interests</h2>
+        <ul class="research-fields">
+            <li>Development Economics</li>
+            <li>Digital Transitions &amp; ICT for Development</li>
+            <li>Agricultural Economics &amp; Rural Transformation</li>
+            <li>Environmental &amp; Ecological Economics</li>
+            <li>Sub-Saharan Africa</li>
+        </ul>
+    </section>
+
+    <!-- Research -->
+    <section id="research">
+        <h2>Working Papers</h2>
+
+        <div class="paper">
+            <div class="paper-title">
+                <!-- Replace with your actual paper title -->
+                Paper Title 1
+            </div>
+            <div class="paper-authors">Abdoul Kadiri Ibrahim Goni</div>
+            <div class="paper-details">Working paper, 2025</div>
+            <button class="abstract-toggle" onclick="let el=this.nextElementSibling; el.style.display=el.style.display==='block'?'none':'block'; this.textContent=el.style.display==='block'?'[Hide abstract]':'[Abstract]';">[Abstract]</button>
+            <div class="paper-abstract">
+                <!-- Replace with your abstract -->
+                Abstract text goes here.
+            </div>
+        </div>
+
+        <!--
+        <div class="paper">
+            <div class="paper-title">Paper Title 2</div>
+            <div class="paper-authors">Author 1, Author 2</div>
+            <div class="paper-details">Working paper, 2025</div>
+        </div>
+        -->
+
+        <h2>Work in Progress</h2>
+        <div class="paper">
+            <div class="paper-title">
+                <!-- Replace with your actual paper title -->
+                Paper Title &mdash; Work in Progress
+            </div>
+            <div class="paper-authors">Abdoul Kadiri Ibrahim Goni</div>
+        </div>
+    </section>
+
+    <!-- CV -->
+    <section id="cv">
+        <h2>Education</h2>
+
+        <div class="cv-entry">
+            <div class="cv-year">2023 &ndash; Pres.</div>
+            <div class="cv-details">
+                <div class="cv-title">PhD in Development Economics</div>
+                <div class="cv-institution">CERDI &mdash; Universit&eacute; Clermont Auvergne, CNRS, IRD</div>
+            </div>
+        </div>
+
+        <div class="cv-entry">
+            <div class="cv-year"><!-- Year --></div>
+            <div class="cv-details">
+                <div class="cv-title">Master's Degree</div>
+                <div class="cv-institution"><!-- Add your master's institution --></div>
+            </div>
+        </div>
+
+        <!-- Add more entries as needed -->
+
+        <p style="margin-top:1.5rem;">
+            <!-- <a href="cv.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Download full CV (PDF)</a> -->
+            <em>Full CV available upon request.</em>
+        </p>
+    </section>
+
+    <!-- Teaching -->
+    <section id="teaching">
+        <h2>Teaching</h2>
+        <p><em>Details coming soon.</em></p>
+        <!--
+        <div class="cv-entry">
+            <div class="cv-year">2024-2025</div>
+            <div class="cv-details">
+                <div class="cv-title">Teaching Assistant &mdash; Course Name</div>
+                <div class="cv-institution">Universit&eacute; Clermont Auvergne</div>
+            </div>
+        </div>
+        -->
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>
+            <strong>Abdoul Kadiri Ibrahim Goni</strong><br>
+            CERDI &mdash; Universit&eacute; Clermont Auvergne<br>
+            26 avenue L&eacute;on Blum<br>
+            63000 Clermont-Ferrand, France
+        </p>
+        <p>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:Ibrahim_Goni.ABDOULKADIRI@doctorant.uca.fr">Ibrahim_Goni.ABDOULKADIRI@doctorant.uca.fr</a>
+        </p>
+    </section>
+
+</div>
+
+<!-- Footer -->
+<footer>
+    &copy; 2025 Abdoul Kadiri Ibrahim Goni. All rights reserved.
+</footer>
+
+</body>
+</html>
