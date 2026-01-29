@@ -3,29 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ibrahim Goni | PhD Candidate, CERDI - Universit&eacute; Clermont Auvergne</title>
-    <meta name="description" content="Abdoul Kadiri Ibrahim Goni - PhD Candidate in Development Economics at CERDI, Universit&eacute; Clermont Auvergne. Research on digital transitions, agricultural transformation, and ecological trade-offs in Sub-Saharan Africa.">
+    <title>Ibrahim G. ABDOULKADIRI | PhD Candidate, CERDI</title>
+    <meta name="description" content="Ibrahim G. ABDOULKADIRI - PhD Candidate in Development Economics at CERDI, CNRS, IRD, Universit&eacute; Clermont Auvergne. Research on digital infrastructure, agricultural transformation, and ecological trade-offs in Sub-Saharan Africa.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
-            --primary: #1a3a5c;
-            --accent: #2c6fbb;
+            --primary: #3d7a99;
+            --primary-dark: #2c5f7a;
+            --accent: #4a90c4;
             --text: #333;
             --text-light: #555;
             --bg: #ffffff;
-            --bg-light: #f8f9fa;
-            --border: #e0e0e0;
-            --max-width: 960px;
+            --bg-light: #f5f5f5;
+            --border: #ddd;
+            --max-width: 1100px;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
@@ -35,14 +32,13 @@
             font-size: 16px;
         }
 
-        /* Navigation */
+        /* ===== NAVIGATION ===== */
         nav {
-            background: var(--primary);
-            padding: 0;
+            background: #3a3a3a;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
         }
 
         nav .nav-inner {
@@ -55,12 +51,13 @@
         }
 
         nav .nav-name {
-            font-family: 'EB Garamond', serif;
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #fff;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            color: rgba(255,255,255,0.9);
             text-decoration: none;
-            padding: 0.9rem 0;
+            padding: 0.8rem 0;
+            letter-spacing: 0.02em;
         }
 
         nav ul {
@@ -74,10 +71,9 @@
             text-decoration: none;
             font-size: 0.92rem;
             font-weight: 400;
-            padding: 1rem 1.1rem;
+            padding: 0.8rem 1.2rem;
             display: block;
             transition: color 0.2s, background 0.2s;
-            letter-spacing: 0.02em;
         }
 
         nav ul li a:hover,
@@ -86,275 +82,322 @@
             background: rgba(255,255,255,0.1);
         }
 
-        /* Hamburger menu */
         .nav-toggle {
             display: none;
             background: none;
             border: none;
             color: #fff;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             cursor: pointer;
             padding: 0.5rem;
         }
 
-        /* Main content */
+        /* ===== HERO BANNER (Africa map) ===== */
+        .banner {
+            width: 100%;
+            height: 240px;
+            background: linear-gradient(135deg, #d4e4ec 0%, #e8eff3 30%, #c8dde8 60%, #b5d1bf 80%, #d4e4ec 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 280px;
+            opacity: 0.3;
+        }
+
+        /* ===== MAIN CONTENT ===== */
         .container {
             max-width: var(--max-width);
             margin: 0 auto;
-            padding: 2.5rem 2rem;
+            padding: 0 2rem;
         }
 
-        /* Hero section */
-        .hero {
+        /* ===== PROFILE SECTION ===== */
+        .profile-section {
             display: flex;
-            gap: 2.5rem;
+            gap: 2rem;
             align-items: flex-start;
-            margin-bottom: 2rem;
+            padding: 3rem 0;
+            flex-wrap: wrap;
         }
 
-        .hero-photo {
+        .profile-photo {
             flex-shrink: 0;
         }
 
-        .hero-photo img {
-            width: 200px;
-            height: 240px;
+        .profile-photo img {
+            width: 190px;
+            height: 230px;
             object-fit: cover;
-            border-radius: 4px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+            border-radius: 3px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.12);
         }
 
-        .hero-photo .placeholder-photo {
-            width: 200px;
-            height: 240px;
-            background: var(--bg-light);
-            border: 2px dashed var(--border);
-            border-radius: 4px;
+        .profile-photo .placeholder-photo {
+            width: 190px;
+            height: 230px;
+            background: #e9ecef;
+            border: 2px dashed #ccc;
+            border-radius: 3px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--text-light);
+            color: #888;
             font-size: 0.85rem;
             text-align: center;
             padding: 1rem;
         }
 
-        .hero-text h1 {
+        .profile-info {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+        }
+
+        .profile-info h1 {
             font-family: 'EB Garamond', serif;
-            font-size: 2.2rem;
+            font-size: 2rem;
+            font-weight: 500;
+            color: var(--accent);
+            margin-bottom: 0.1rem;
+            letter-spacing: 0.02em;
+        }
+
+        .profile-info h1 span {
+            display: block;
+            font-size: 1.6rem;
+        }
+
+        .profile-info .subtitle {
+            font-size: 1rem;
             font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 0.3rem;
-            line-height: 1.2;
-        }
-
-        .hero-text .title {
-            font-size: 1.05rem;
-            color: var(--text-light);
-            margin-bottom: 0.6rem;
-        }
-
-        .hero-text .affiliation {
-            font-size: 0.95rem;
-            color: var(--text-light);
+            color: var(--text);
+            margin-top: 0.8rem;
             margin-bottom: 1.2rem;
         }
 
-        .hero-text .affiliation a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        .hero-text .affiliation a:hover {
-            text-decoration: underline;
-        }
-
-        .hero-text .contact-line {
+        .profile-info .contact-info {
             font-size: 0.9rem;
             color: var(--text-light);
             margin-bottom: 0.3rem;
         }
 
-        .hero-text .contact-line a {
+        .profile-info .contact-info a {
             color: var(--accent);
             text-decoration: none;
         }
 
-        .hero-text .contact-line a:hover {
+        .profile-info .contact-info a:hover {
             text-decoration: underline;
         }
 
-        .hero-text .social-links {
+        .profile-info .social-links {
             margin-top: 1rem;
             display: flex;
+            justify-content: center;
             gap: 0.8rem;
         }
 
-        .hero-text .social-links a {
-            color: var(--text-light);
-            font-size: 1.2rem;
+        .profile-info .social-links a {
+            color: #666;
+            font-size: 1.4rem;
             transition: color 0.2s;
         }
 
-        .hero-text .social-links a:hover {
+        .profile-info .social-links a:hover {
             color: var(--accent);
         }
 
-        /* Sections */
-        section {
-            margin-bottom: 2.5rem;
-        }
-
-        section h2 {
-            font-family: 'EB Garamond', serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 1rem;
-            padding-bottom: 0.4rem;
-            border-bottom: 2px solid var(--primary);
-        }
-
-        section p {
-            margin-bottom: 0.8rem;
-            text-align: justify;
-        }
-
-        /* Research interests */
-        .research-fields {
-            list-style: none;
-            padding: 0;
-        }
-
-        .research-fields li {
-            padding: 0.3rem 0;
-            padding-left: 1.2rem;
-            position: relative;
-        }
-
-        .research-fields li::before {
-            content: "\2022";
-            color: var(--accent);
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-
-        /* Papers */
-        .paper {
-            margin-bottom: 1.5rem;
-            padding-left: 1.2rem;
-            border-left: 3px solid var(--bg-light);
-        }
-
-        .paper:hover {
-            border-left-color: var(--accent);
-        }
-
-        .paper .paper-title {
-            font-weight: 600;
-            color: var(--text);
-            margin-bottom: 0.2rem;
-        }
-
-        .paper .paper-title a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        .paper .paper-title a:hover {
-            text-decoration: underline;
-        }
-
-        .paper .paper-authors {
-            font-size: 0.92rem;
-            color: var(--text-light);
-            margin-bottom: 0.15rem;
-        }
-
-        .paper .paper-details {
-            font-size: 0.88rem;
-            color: var(--text-light);
-            font-style: italic;
-        }
-
-        .paper .paper-abstract {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            margin-top: 0.5rem;
-            display: none;
-        }
-
-        .paper .abstract-toggle {
-            font-size: 0.85rem;
-            color: var(--accent);
-            cursor: pointer;
-            border: none;
-            background: none;
-            padding: 0;
-            margin-top: 0.3rem;
-            font-family: inherit;
-        }
-
-        .paper .abstract-toggle:hover {
-            text-decoration: underline;
-        }
-
-        /* Education / CV */
-        .cv-entry {
-            margin-bottom: 1rem;
-            display: flex;
-            gap: 1rem;
-        }
-
-        .cv-year {
-            flex-shrink: 0;
-            width: 100px;
-            font-size: 0.9rem;
-            color: var(--text-light);
-            font-weight: 600;
-        }
-
-        .cv-details {
+        .profile-bio {
             flex: 1;
+            min-width: 280px;
+            text-align: justify;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: var(--text);
         }
 
-        .cv-details .cv-title {
-            font-weight: 600;
+        .profile-bio p {
+            margin-bottom: 1rem;
         }
 
-        .cv-details .cv-institution {
-            font-size: 0.92rem;
-            color: var(--text-light);
+        /* ===== SECTION DIVIDER ===== */
+        .section-divider {
+            border: none;
+            height: 2px;
+            background: var(--primary);
+            margin: 0;
         }
 
-        /* Footer */
-        footer {
-            border-top: 1px solid var(--border);
-            padding: 1.5rem 2rem;
+        /* ===== RESEARCH SECTION ===== */
+        .research-section {
+            padding: 3rem 0;
+        }
+
+        .research-section h2 {
+            font-family: 'EB Garamond', serif;
+            font-size: 2rem;
+            font-weight: 500;
+            color: var(--accent);
             text-align: center;
-            font-size: 0.85rem;
-            color: var(--text-light);
-            max-width: var(--max-width);
+            margin-bottom: 2rem;
+        }
+
+        .research-section hr {
+            border: none;
+            height: 2px;
+            background: var(--primary);
+            margin-bottom: 2rem;
+        }
+
+        .research-list {
+            list-style: decimal;
+            padding-left: 2rem;
+            max-width: 800px;
             margin: 0 auto;
         }
 
-        /* Mobile */
-        @media (max-width: 700px) {
-            .hero {
+        .research-list li {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .research-list li a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .research-list li a:hover {
+            text-decoration: underline;
+        }
+
+        .research-list li .stage {
+            color: var(--text-light);
+            font-size: 0.92rem;
+        }
+
+        .research-list li .stage strong {
+            font-weight: 600;
+        }
+
+        /* ===== TEACHING SECTION ===== */
+        .teaching-section {
+            background: var(--bg-light);
+            padding: 3rem 0;
+        }
+
+        .teaching-banner {
+            background: linear-gradient(135deg, #4a5568, #2d3748);
+            padding: 2.5rem 2rem 1.5rem;
+            text-align: center;
+            margin-bottom: 0;
+        }
+
+        .teaching-banner h2 {
+            font-family: 'EB Garamond', serif;
+            font-size: 2rem;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .teaching-table {
+            max-width: 700px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .teaching-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .teaching-row:last-child {
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .teaching-row .course {
+            font-size: 0.95rem;
+            color: var(--text);
+        }
+
+        .teaching-row .year {
+            font-size: 0.95rem;
+            color: var(--text);
+            font-weight: 600;
+            white-space: nowrap;
+            margin-left: 2rem;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #2d3748;
+            color: rgba(255,255,255,0.8);
+            padding: 2rem;
+        }
+
+        footer .footer-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        footer a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+        footer .footer-email {
+            font-size: 0.9rem;
+        }
+
+        footer .footer-social {
+            font-size: 1.3rem;
+        }
+
+        footer .footer-collab {
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-align: right;
+        }
+
+        footer .footer-collab span {
+            display: block;
+            font-weight: 400;
+            font-size: 0.88rem;
+        }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 768px) {
+            .profile-section {
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
             }
 
-            .hero-text .social-links {
-                justify-content: center;
+            .profile-bio {
+                text-align: justify;
             }
 
-            .hero-photo img,
-            .hero-photo .placeholder-photo {
-                width: 160px;
-                height: 200px;
+            .banner {
+                height: 160px;
             }
 
             nav .nav-inner {
@@ -368,8 +411,8 @@
                 top: 100%;
                 left: 0;
                 right: 0;
-                background: var(--primary);
-                box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+                background: #3a3a3a;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
             }
 
             nav ul.open {
@@ -386,16 +429,26 @@
             }
 
             .container {
-                padding: 1.5rem 1rem;
+                padding: 0 1rem;
             }
 
-            .cv-entry {
+            .teaching-row {
                 flex-direction: column;
-                gap: 0.2rem;
+                gap: 0.3rem;
+                text-align: center;
             }
 
-            .cv-year {
-                width: auto;
+            .teaching-row .year {
+                margin-left: 0;
+            }
+
+            footer .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            footer .footer-collab {
+                text-align: center;
             }
         }
     </style>
@@ -405,180 +458,134 @@
 <!-- Navigation -->
 <nav>
     <div class="nav-inner">
-        <a href="#" class="nav-name">Ibrahim Goni</a>
+        <a href="#" class="nav-name">Ibrahim G. ABDOULKADIRI</a>
         <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('nav ul').classList.toggle('open')">
             <i class="fas fa-bars"></i>
         </button>
         <ul>
-            <li><a href="#about" class="active">Home</a></li>
+            <li><a href="#home" class="active">Home</a></li>
             <li><a href="#research">Research</a></li>
-            <li><a href="#cv">CV</a></li>
-            <li><a href="#teaching">Teaching</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#teaching">Teaching/Ressources</a></li>
         </ul>
     </div>
 </nav>
 
-<!-- Main Content -->
-<div class="container">
+<!-- Banner with Africa map background -->
+<div class="banner">
+    <svg viewBox="0 0 600 700" xmlns="http://www.w3.org/2000/svg">
+        <!-- Simplified Africa continent shape -->
+        <path d="M300,50 C320,50 340,55 355,60 L370,65 C385,72 395,80 405,92 L420,110 C430,125 435,140 440,158 L445,175 C448,190 450,205 450,220 L450,240 C450,258 448,275 445,290 L440,310 C436,328 430,345 422,360 L410,380 C400,398 388,412 375,425 L360,438 C348,448 338,458 330,470 L318,488 C310,502 305,515 302,530 L300,548 C298,565 298,580 300,595 L302,610 C304,620 300,630 292,635 L280,640 C270,642 260,638 255,630 L245,615 C238,605 232,592 228,580 L222,562 C218,548 212,535 205,522 L195,508 C185,495 175,485 162,475 L148,468 C135,462 125,455 118,445 L110,432 C102,418 98,405 98,390 L98,370 C98,355 100,340 105,328 L112,310 C118,295 125,282 135,270 L148,255 C158,242 170,232 182,225 L198,218 C210,212 222,210 235,210 L245,210 C252,210 258,208 262,202 L270,190 C275,182 278,172 280,162 L282,148 C284,135 285,122 285,108 L285,90 C285,75 288,62 295,52 Z"
+              fill="#8fbc8f" opacity="0.5"/>
+    </svg>
+</div>
 
-    <!-- Hero -->
-    <div class="hero" id="about">
-        <div class="hero-photo">
-            <!-- Replace with your photo: <img src="photo.jpg" alt="Ibrahim Goni"> -->
+<!-- Profile Section -->
+<div class="container">
+    <div class="profile-section" id="home">
+
+        <!-- Photo -->
+        <div class="profile-photo">
+            <!-- To add your photo: save it as "photo.jpg" in the same folder, then replace the placeholder div below with:
+                 <img src="photo.jpg" alt="Ibrahim G. ABDOULKADIRI"> -->
             <div class="placeholder-photo">
-                <span>Add your<br>photo here<br><small>(photo.jpg)</small></span>
+                <span>Add your photo<br><small>Save as <strong>photo.jpg</strong><br>in this folder</small></span>
             </div>
         </div>
-        <div class="hero-text">
-            <h1>Abdoul Kadiri Ibrahim Goni</h1>
-            <div class="title">PhD Candidate in Development Economics</div>
-            <div class="affiliation">
-                <a href="https://cerdi.uca.fr/" target="_blank">CERDI</a> &mdash;
-                Universit&eacute; Clermont Auvergne, CNRS, IRD<br>
-                Clermont-Ferrand, France
+
+        <!-- Name & Contact -->
+        <div class="profile-info">
+            <h1>ABDOULKADIRI<span>Ibrahim Goni</span></h1>
+            <div class="subtitle">PhD Candidate in Development Economics | CERDI CNRS, IRD</div>
+            <div class="contact-info">
+                Contact&nbsp;&nbsp;<a href="mailto:ibrahimgoni02@gmail.com">ibrahimgoni02@gmail.com</a> /
             </div>
-            <div class="contact-line">
-                <i class="fas fa-envelope" style="width:16px;"></i>
-                <a href="mailto:Ibrahim_Goni.ABDOULKADIRI@doctorant.uca.fr">Ibrahim_Goni.ABDOULKADIRI@doctorant.uca.fr</a>
+            <div class="contact-info">
+                <a href="mailto:Ibrahim_Goni.ABDOULKADIRI@uca.fr">Ibrahim_Goni.ABDOULKADIRI@uca.fr</a>
             </div>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/abdoul-kadiri-ibrahim-goni-4287b124a" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/ibrahimgoni" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                <!-- Add your Google Scholar, ORCID, etc. -->
-                <!-- <a href="#" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a> -->
-                <!-- <a href="#" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a> -->
+            </div>
+        </div>
+
+        <!-- Bio -->
+        <div class="profile-bio">
+            <p>
+                I am a PhD candidate at CERDI CNRS University of Clermont Auvergne. Raised in a farming family in Cameroon, I witnessed firsthand the structural challenges facing rural communities&mdash;this upbringing shaped my passion for designing data-driven, sustainable solutions.
+            </p>
+            <p>
+                My research explores the nexus of digital infrastructure, agricultural transformation, and ecological trade-offs in Sub-Saharan Africa.
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- Research Section -->
+<div class="container">
+    <div class="research-section" id="research">
+        <h2>Research in progress</h2>
+        <hr>
+        <ol class="research-list">
+            <li>
+                <a href="#">High Internet and Economic Development in Africa</a>
+                <span class="stage">&nbsp;(analysis &amp; writing stage)</span>
+            </li>
+            <li>
+                <a href="#">Mobile Money and Agricultural Productivity: Evidence from Kenya</a>
+                <span class="stage">&nbsp;(design stage)</span>
+            </li>
+            <li>
+                <a href="#">Biomass Burning and Biodiversity Loss in Africa</a>
+                <span class="stage">&nbsp;(design stage)</span>
+            </li>
+            <li>
+                <a href="#">Public Policies to Internalize the Impacts of Agriculture on Biodiversity</a>,
+                with Marine Coinon, C&eacute;line Bonnet, Zohra Bouamra-Mechemache, and Cl&eacute;lia Sirami
+                <span class="stage">(<strong>writing stage</strong>)</span>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<!-- Teaching Section -->
+<div id="teaching">
+    <div class="teaching-banner">
+        <h2>Teaching/Ressources</h2>
+    </div>
+    <div class="teaching-section">
+        <div class="teaching-table">
+            <div class="teaching-row">
+                <div class="course">TA &ndash; Impact Analysis, 2nd year M.Sc.</div>
+                <div class="year">2025&ndash;</div>
+            </div>
+            <div class="teaching-row">
+                <div class="course">TA &ndash; Development Economics Seminar, 2nd year M.Sc.</div>
+                <div class="year">2025&ndash;</div>
+            </div>
+            <div class="teaching-row">
+                <div class="course">TA &ndash; Econometrics, 1st year M.Sc.</div>
+                <div class="year">2025&ndash;</div>
             </div>
         </div>
     </div>
-
-    <!-- About -->
-    <section>
-        <h2>About</h2>
-        <p>
-            I am a PhD candidate in Development Economics at the
-            <a href="https://cerdi.uca.fr/" target="_blank">Centre d'&Eacute;tudes et de Recherches sur le D&eacute;veloppement International (CERDI)</a>,
-            Universit&eacute; Clermont Auvergne (UCA), affiliated with CNRS and IRD.
-        </p>
-        <p>
-            My research focuses on the economics of digital transitions, agricultural transformation,
-            and ecological trade-offs in Sub-Saharan Africa. I study how digital technologies reshape
-            rural economies, how agricultural systems adapt to environmental pressures, and the
-            interactions between economic development and ecological sustainability.
-        </p>
-    </section>
-
-    <!-- Research Interests -->
-    <section>
-        <h2>Research Interests</h2>
-        <ul class="research-fields">
-            <li>Development Economics</li>
-            <li>Digital Transitions &amp; ICT for Development</li>
-            <li>Agricultural Economics &amp; Rural Transformation</li>
-            <li>Environmental &amp; Ecological Economics</li>
-            <li>Sub-Saharan Africa</li>
-        </ul>
-    </section>
-
-    <!-- Research -->
-    <section id="research">
-        <h2>Working Papers</h2>
-
-        <div class="paper">
-            <div class="paper-title">
-                <!-- Replace with your actual paper title -->
-                Paper Title 1
-            </div>
-            <div class="paper-authors">Abdoul Kadiri Ibrahim Goni</div>
-            <div class="paper-details">Working paper, 2025</div>
-            <button class="abstract-toggle" onclick="let el=this.nextElementSibling; el.style.display=el.style.display==='block'?'none':'block'; this.textContent=el.style.display==='block'?'[Hide abstract]':'[Abstract]';">[Abstract]</button>
-            <div class="paper-abstract">
-                <!-- Replace with your abstract -->
-                Abstract text goes here.
-            </div>
-        </div>
-
-        <!--
-        <div class="paper">
-            <div class="paper-title">Paper Title 2</div>
-            <div class="paper-authors">Author 1, Author 2</div>
-            <div class="paper-details">Working paper, 2025</div>
-        </div>
-        -->
-
-        <h2>Work in Progress</h2>
-        <div class="paper">
-            <div class="paper-title">
-                <!-- Replace with your actual paper title -->
-                Paper Title &mdash; Work in Progress
-            </div>
-            <div class="paper-authors">Abdoul Kadiri Ibrahim Goni</div>
-        </div>
-    </section>
-
-    <!-- CV -->
-    <section id="cv">
-        <h2>Education</h2>
-
-        <div class="cv-entry">
-            <div class="cv-year">2023 &ndash; Pres.</div>
-            <div class="cv-details">
-                <div class="cv-title">PhD in Development Economics</div>
-                <div class="cv-institution">CERDI &mdash; Universit&eacute; Clermont Auvergne, CNRS, IRD</div>
-            </div>
-        </div>
-
-        <div class="cv-entry">
-            <div class="cv-year"><!-- Year --></div>
-            <div class="cv-details">
-                <div class="cv-title">Master's Degree</div>
-                <div class="cv-institution"><!-- Add your master's institution --></div>
-            </div>
-        </div>
-
-        <!-- Add more entries as needed -->
-
-        <p style="margin-top:1.5rem;">
-            <!-- <a href="cv.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Download full CV (PDF)</a> -->
-            <em>Full CV available upon request.</em>
-        </p>
-    </section>
-
-    <!-- Teaching -->
-    <section id="teaching">
-        <h2>Teaching</h2>
-        <p><em>Details coming soon.</em></p>
-        <!--
-        <div class="cv-entry">
-            <div class="cv-year">2024-2025</div>
-            <div class="cv-details">
-                <div class="cv-title">Teaching Assistant &mdash; Course Name</div>
-                <div class="cv-institution">Universit&eacute; Clermont Auvergne</div>
-            </div>
-        </div>
-        -->
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>
-            <strong>Abdoul Kadiri Ibrahim Goni</strong><br>
-            CERDI &mdash; Universit&eacute; Clermont Auvergne<br>
-            26 avenue L&eacute;on Blum<br>
-            63000 Clermont-Ferrand, France
-        </p>
-        <p>
-            <i class="fas fa-envelope"></i>
-            <a href="mailto:Ibrahim_Goni.ABDOULKADIRI@doctorant.uca.fr">Ibrahim_Goni.ABDOULKADIRI@doctorant.uca.fr</a>
-        </p>
-    </section>
-
 </div>
 
 <!-- Footer -->
 <footer>
-    &copy; 2025 Abdoul Kadiri Ibrahim Goni. All rights reserved.
+    <div class="footer-inner">
+        <div class="footer-email">
+            <a href="mailto:ibrahimgoni02@gmail.com">ibrahimgoni02@gmail.com</a>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/in/abdoul-kadiri-ibrahim-goni-4287b124a" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="footer-collab">
+            I'm always open to collaboration.<br>
+            <span>Feel free to reach out!</span>
+        </div>
+    </div>
 </footer>
 
 </body>
